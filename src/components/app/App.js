@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import ItemList from '../item-list/item-list'
+import AddItem from '../add-item/add-item'
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>MORE COMPONENTS!!!!!!!!!!!!!</p>
+        <AddItem />
         <ItemList items={this.state.items} onDeleteItem={this.onDeleteItem} />
       </div>
     )
