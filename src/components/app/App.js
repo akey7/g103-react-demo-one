@@ -23,10 +23,14 @@ class App extends Component {
     })
   }
 
+  onAddItem = ({ item, reason }) => {
+    console.log(`Item: ${item} Reason: ${reason}`)
+  }
+
   render() {
     return (
       <div className="App">
-        <AddItem />
+        <AddItem onAddItem={this.onAddItem} />
         <ItemList items={this.state.items} onDeleteItem={this.onDeleteItem} />
       </div>
     )

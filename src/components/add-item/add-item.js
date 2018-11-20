@@ -12,7 +12,8 @@ class AddItem extends Component {
   onSubmit = (e) => {
     e.preventDefault()
     const { item, reason } = this.state
-    console.log(`Item: ${item} Reason: ${reason}`)
+    const { onAddItem } = this.props
+    onAddItem({ item, reason })
   }
 
   onReasonChange = (e) => {
