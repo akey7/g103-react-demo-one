@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import ItemList from '../item-list/item-list'
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <p>MORE COMPONENTS!!!!!!!!!!!!!</p>
+        <ItemList />
       </div>
     )
   }
