@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 
-// const Item = ({ item }) => <li><button>discard</button> {item.item} {item.reason}</li>
-
 class Item extends Component {
+  onDiscardClick = (e) => {
+    e.preventDefault()
+    const { id, onDeleteItem } = this.props
+    onDeleteItem({ id })
+  }
+
   render() {
     const { item } = this.props
-    return <li><button>discard</button> {item.item} {item.reason}</li>
+    return <li><button onClick={this.onDiscardClick}>discard</button> {item.item} {item.reason}</li>
   }
 }
 
