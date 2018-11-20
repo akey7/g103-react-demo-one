@@ -28,7 +28,13 @@ class App extends Component {
       .reduce((acc, el) => Math.max(acc, el.id), 0)
 
     const nextMaxId = maxId + 1
-    console.log(`Item: ${item} Reason: ${reason}, nextMaxId: ${nextMaxId}`)
+    const newItem = { id: nextMaxId, item, reason }
+    const newItems = [...this.state.items, newItem]
+
+    this.setState({
+      ...this.state,
+      items: newItems
+    })
   }
 
   render() {
