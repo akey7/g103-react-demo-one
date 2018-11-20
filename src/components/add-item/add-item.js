@@ -14,6 +14,11 @@ class AddItem extends Component {
     const { item, reason } = this.state
     const { onAddItem } = this.props
     onAddItem({ item, reason })
+
+    this.setState({
+      item: '',
+      reason: ''
+    })
   }
 
   onReasonChange = (e) => {
